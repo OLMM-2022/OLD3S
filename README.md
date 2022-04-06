@@ -24,11 +24,11 @@ where the data streams are described by feature spaces that constantly evolve.
     (biasing shallow learners)
     and expressiveness (requiring deep learners).
     Motivated by this,
-    we propose a novel OLD<sub>3</sub>S paradigm,
+    we propose a novel OLD<sup>3</sup>S paradigm,
     where a shared latent subspace is discovered 
     to  summarize information from the old and new feature spaces,
     building intermediate feature mapping relationship.
-    A key trait of OLD<sub>3</sub>S is to treat
+    A key trait of OLD<sup>3</sup>S is to treat
     the *model capacity* as a learnable semantics,
     yields optimal model depth and parameters jointly in accordance 
     with the complexity and non-linearity of the inputs
