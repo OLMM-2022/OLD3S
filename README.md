@@ -37,7 +37,7 @@ where the data streams are described by feature spaces that constantly evolve.
     real-world datasets including images and natural languages
     substantiate the viability and effectiveness of our proposal.
 ## Requirements
-This code was tested on Linux(Ubuntu) and macOS
+This code was tested on Windows and macOS
 ```
 conda create --name GAFNC python=3.7.10
 pip install torch==1.6.0+cpu torchvision==0.7.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
