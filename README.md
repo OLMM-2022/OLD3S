@@ -11,34 +11,28 @@ where the data streams are described by feature spaces that constantly evolve.
     2) New features that just emerge are described by 
     very few data instances, 
     result in \emph{weak} learners that tend to make error predictions.
-    
     To overcome,
     a plausible idea is to establish relationship
     between the pre-and-post evolving feature spaces,
     so that an online learner can leverage and adapt 
     the learned knowledge from the old 
     to the new features for better performance.
-    
     Unfortunately, this idea does not scale up to 
     high-dimensional media streams 
     with complex feature interplay,
     suffering an tradeoff between onlineness 
     (biasing shallow learners)
     and expressiveness (requiring deep learners).
-
     Motivated by this,
     we propose a novel \myAlg\ paradigm,
     where a shared latent subspace is discovered 
     to  summarize information from the old and new feature spaces,
     building intermediate feature mapping relationship.
-
-    
     A key trait of \myAlg\ is to treat
     the {\em model capacity} as a learnable semantics,
     yields optimal model depth and parameters jointly in accordance 
     with the complexity and non-linearity of the inputs
     in an online fashion.
-    
     Both theoretical analyses and extensive experiments benchmarked on
     real-world datasets including images and natural languages
     substantiate the viability and effectiveness of our proposal.
