@@ -10,7 +10,7 @@ where the data streams are described by feature spaces that constantly evolve.
     require the learners to be updated on-the-fly.
     2) New features that just emerge are described by 
     very few data instances, 
-    result in $\emph{weak}$ learners that tend to make error predictions.
+    result in *weak* learners that tend to make error predictions.
     To overcome,
     a plausible idea is to establish relationship
     between the pre-and-post evolving feature spaces,
@@ -24,12 +24,12 @@ where the data streams are described by feature spaces that constantly evolve.
     (biasing shallow learners)
     and expressiveness (requiring deep learners).
     Motivated by this,
-    we propose a novel \myAlg\ paradigm,
+    we propose a novel OLD^3S paradigm,
     where a shared latent subspace is discovered 
     to  summarize information from the old and new feature spaces,
     building intermediate feature mapping relationship.
-    A key trait of \myAlg\ is to treat
-    the {\em model capacity} as a learnable semantics,
+    A key trait of OLD^3S is to treat
+    the *model capacity* as a learnable semantics,
     yields optimal model depth and parameters jointly in accordance 
     with the complexity and non-linearity of the inputs
     in an online fashion.
