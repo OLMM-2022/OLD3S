@@ -10,7 +10,7 @@ where the data streams are described by feature spaces that constantly evolve.
     require the learners to be updated on-the-fly.
     2) New features that just emerge are described by 
     very few data instances, 
-    result in \emph{weak} learners that tend to make error predictions.
+    result in $\emph{weak}$ learners that tend to make error predictions.
     To overcome,
     a plausible idea is to establish relationship
     between the pre-and-post evolving feature spaces,
