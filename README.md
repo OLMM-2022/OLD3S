@@ -2,13 +2,9 @@
 ![Python 3.9](https://img.shields.io/badge/python-3.9-green.svg)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 ## Abstract
-This paper investigates a new online learning problem
-    with doubly-streaming data,
-    where the data streams 
-    are described by feature spaces that constantly evolve.
-    
+This paper investigates a new online learning problem with doubly-streaming data,
+where the data streams are described by feature spaces that constantly evolve.
     The challenges of this problem are two folds.
-    
     1) Data instances that flow in ceaselessly
     are not likely to always follow an identical distribution,
     require the learners to be updated on-the-fly.
