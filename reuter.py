@@ -490,25 +490,7 @@ class Reuter:
         return output, Loss_sum
 
 
-def pcadatasets(from_dataset, to_dataset):
-    if from_dataset == 'FR':
-        pca_from = PCA(n_components=2500)
-    else:
-        pca_from = PCA(n_components=2000)
-    
-    if to_dataset == 'FR':
-        pca_to = PCA(n_components=2500)
-    elif to_dataset == 'SP':
-        pca_to = PCA(n_components=1000)
-    else:
-        pca_to = PCA(n_components=1500)
-  
-    oldx1 = torch.load('./data/'+ from_dataset + '_'+to_dataset +'/x_S1')
-    oldx2 = torch.load('./data/'+ from_dataset + '_'+to_dataset +'/x_S2')
-    newx1 = pca_from.fit_transform(oldx1)
-    newx2 = pca_to.fit_transform(oldx2)
-    torch.save(newx1,'./data/'+ from_dataset + '_'+to_dataset +'/x_S1_pca')
-    torch.save(newx2,'./data/'+ from_dataset + '_'+to_dataset +'/x_S2_pca')
+
 
 
 def SaveDataSets(from_dataset, to_dataset, samples, size1, size2):
