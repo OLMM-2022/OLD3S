@@ -39,26 +39,33 @@ class OLDS:
             if self.FromLan =='EN':
                 self.samplesize = 18758
                 self.overlap = 2758
-                self.dimension1 = 2000
+                self.dimension1 = 21531
+                self.dimension1_pca = 2000
                 if self.ToLan == 'FR':
-                    self.dimension2 = 2500
+                    self.dimension2 = 24893
+                    self.dimension2_pca = 2500
                 elif self.ToLan == 'IT':
-                    self.dimension2 = 1500
+                    self.dimension2 = 15506
+                    self.dimension2_pca = 1500
                 else:
-                    self.dimension2 = 1000
+                    self.dimension2 = 11547
+                    self.dimension2_pca = 1000
             else:
                 self.samplesize = 26648
                 self.overlap = 3648
-                self.dimension1 = 2000
+                self.dimension1 = 24893
+                self.dimension1_pca = 2500
                 if self.ToLan == 'IT':
-                    self.dimension2 = 1500
+                    self.dimension2 = 15503
+                    self.dimension2_pca = 1500
                 else:
-                    self.dimension2 = 1000
+                    self.dimension2 = 11547
+                    self.dimension2_pca = 1000
 
             x_S1, x_S2, y_S1, y_S2 = loadreuter(self.FromLan,self.ToLan,
-                                                self.samplesize, self.dimension, self.dimension2)
+                                                self.samplesize, self.dimension1, self.dimension2)
             train = Reuter(x_S1, y_S1, x_S2, y_S2, self.samplesize, self.samplesize,
-                           self.dimension1,self.dimension2,self.FromLan,self.ToLan)
+                           self.dimension1_pca,self.dimension2_pca,self.FromLan,self.ToLan)
             train.T_2()
 
 
