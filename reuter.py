@@ -4,7 +4,7 @@ import pandas as pd
 from sklearn.decomposition import PCA
 from sklearn.utils import shuffle
 from torch.nn.functional import normalize
-from torchvision.transforms.functional import scale
+
 from torch import nn
 from torch.nn.parameter import Parameter
 import torch
@@ -38,8 +38,7 @@ class LoadReuter():
             self.data = normalize(self.data, norm='l2', axis=0)
         elif norm == 'L1':
             self.data = normalize(self.data, norm='l1', axis=0)
-        elif norm == 'scale':
-            self.data = scale(self.data)
+   
 
     def translate(self, toLang, seed=42):
         fromLang = self.fromLang
@@ -522,7 +521,9 @@ def SaveDataSets(from_dataset, to_dataset, samples, size1, size2):
     torch.save(y_S2, './data/' + from_dataset + '_' + to_dataset + '/y_S2')
 
 
-def loadreuter(from_dataset, to_dataset):
+def loadreuter(from_dataset, to_dataset, samples, size1, size2):
+    print('start to generate data and labels')
+    SaveDataSets(from_dataset, to_dataset, samples, size1, size2)
     x_S1 = torch.load('./data/' + from_dataset + '_' + to_dataset + '/x_S1_pca')
     x_S2 = torch.load('./data/' + from_dataset + '_' + to_dataset + '/x_S2_pca')
     y_S1 = torch.load('./data/' + from_dataset + '_' + to_dataset + '/y_S1')
