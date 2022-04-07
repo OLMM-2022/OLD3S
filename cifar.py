@@ -220,7 +220,7 @@ class AutoEncoder(nn.Module):
 def Dynamic_ResNet18():
     return ResNet(ResBasicBlock, [1, 2, 2, 2])
 
-class OLDS:
+class cifar:
     def __init__(self, data_S1, label_S1, data_S2, label_S2, T1, t, b=0.9, lr=0.01, s=0.008, m=0.95, spike=9e-5,
                  thre=10000):
         self.device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
