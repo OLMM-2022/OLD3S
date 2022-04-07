@@ -39,20 +39,20 @@ where the data streams are described by feature spaces that constantly evolve.
 ## Requirements
 This code was tested on Windows and macOS
 ```
-conda create --name GAFNC python=3.7.10
-pip install torch==1.6.0+cpu torchvision==0.7.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
-pip install torch-scatter==2.0.6 -f https://data.pyg.org/whl/torch-1.6.0%2Bcpu.html
-pip install torch-sparse==0.6.9 -f https://data.pyg.org/whl/torch-1.6.0%2Bcpu.html
-pip install torch-geometric==1.7.0
-pip install torch-cluster==1.5.9 -f https://data.pyg.org/whl/torch-1.6.0%2Bcpu.html
-pip install torch-spline-conv==1.2.1 -f https://data.pyg.org/whl/torch-1.6.0%2Bcpu.html
-conda install -c conda-forge pyod
+conda create -n OLDS python=3.9
+conda activate OLDS
+pip install torchvision
+pip install pandas
+pip install matplotlib
+pip install sklearn
+
 ```
 
 ## Run
-```angular2html
-conda activate GAFNC
-zsh run_global_attack_on_Cora.sh
-zsh run_target_attack_on_Cora.sh
+
+```
+conda activate OLDS
+python main.py -DataName=cifar
+python main.py -DataName=reuter -FromLanguage=EN -ToLanguage=FR
 ```
 
