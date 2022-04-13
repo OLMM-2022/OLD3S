@@ -52,7 +52,7 @@ pip install sklearn
 
 ```
 conda activate OLDS
-default: python main.py -DataName=cifar -beta=0.9 -learningrate=0.01
-default: python main.py -DataName=reuter -FromLanguage=EN -ToLanguage=FR -beta=0.9 -learningrate=0.01
+python main.py -DataName=cifar -beta=0.9 -learningrate=0.01
+python main.py -DataName=reuter -FromLanguage=EN -ToLanguage=FR -beta=0.9 -learningrate=0.01
 ```
 
