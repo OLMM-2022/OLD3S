@@ -15,6 +15,8 @@ def main():
     parser.add_argument('-DataName', action='store', dest='DataName', default='cifar')
     parser.add_argument('-FromLanguage', action='store', dest='FromLanguage', default='EN')
     parser.add_argument('-ToLanguage', action='store', dest='ToLanguage', default='FR')
+    parser.add_argument('-beta', action='store', dest='beta', default=0.9)
+    parser.add_argument('-learningrate', action='store', dest='learningrate', default=0.01)
     args = parser.parse_args()
     learner = OLDS(args)
     learner.train()
@@ -28,12 +30,13 @@ class OLDS:
         self.datasetname = args.DataName
         self.FromLan = args.FromLanguage
         self.ToLan = args.ToLanguage
-
+        self.beta = args.beta
+        self.learningrate = args.learningrate
     def train(self):
         if self.datasetname == 'cifar':
             print('trainning starts')
             x_S1, x_S2, y_S1, y_S2 = loadcifar()
-            train = cifar(x_S1, y_S1, x_S2, y_S2, 50000, 5000)
+            train = cifar(x_S1, y_S1, x_S2, y_S2, 50000, 5000,self.beta,self.learningrate)
             train.T_2()
         else:
             if self.FromLan =='EN':
