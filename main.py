@@ -68,7 +68,7 @@ class OLDS:
             x_S1, x_S2, y_S1, y_S2 = loadreuter(self.FromLan,self.ToLan,
                                                 self.samplesize, self.dimension1, self.dimension2)
             train = Reuter(x_S1, y_S1, x_S2, y_S2, self.samplesize, self.samplesize,
-                           self.dimension1_pca,self.dimension2_pca,self.FromLan,self.ToLan)
+                           self.dimension1_pca,self.dimension2_pca,self.FromLan,self.ToLan,self.beta,self.learningrate)
             train.T_2()
 
 
