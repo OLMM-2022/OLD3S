@@ -215,8 +215,7 @@ class AE(nn.Module):
 
 
 class Reuter:
-    def __init__(self, data_S1, label_S1, data_S2, label_S2, T1, t, dimension1, dimension2, lr, FromLan,ToLan, b=0.9, s=0.008,
-                 m=0.99):
+    def __init__(self, data_S1, label_S1, data_S2, label_S2, T1, t, dimension1, dimension2, FromLan,ToLan, b=0.9, lr, m=0.99, s=0.008):
 
         self.device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
         self.correct = 0
